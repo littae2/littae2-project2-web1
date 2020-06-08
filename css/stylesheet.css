@@ -1,0 +1,522 @@
+.column {
+  width: 100%;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.footer {
+  flex-shrink: 0;
+}
+html {
+  font-family: "Hind";
+}
+.nav a {
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: "Hind";
+  font-size: 200%;
+  color: white;
+
+  text-decoration-line: none;
+  background-color: black;
+  border: none;
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+#Top {
+  background-color: black;
+}
+header {
+  background-color: black;
+}
+
+/** Contact page **/
+.contactBanner {
+  background-image: url("../img/keyboard.jpg");
+  background-size: 100%;
+  background-position-y: center;
+  padding: 7%;
+  color: white;
+  filter: grayscale(50%);
+}
+#contactfooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.contactForm input {
+  width: 70%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 100%;
+}
+#pageInfo {
+  text-align: center;
+  font-size: 200%;
+}
+.contactForm {
+  padding: 5%;
+  padding-left: 30%;
+  font-size: 200%;
+  justify-content: center;
+}
+.contactForm textarea {
+  font-family: "Hind";
+  width: 70%;
+  height: 35%;
+  font-size: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.contactBanner h1 {
+  text-align: center;
+  font-size: 600%;
+  padding-bottom: 3%;
+}
+
+/** Home page header **/
+.HomeBanner {
+  background-image: url("../img/gitar.jpg");
+  filter: grayscale(50%);
+  background-size: 100%;
+  background-position-y: 80%;
+  color: white;
+  display: flex;
+}
+#profilePic {
+  margin: 1%;
+  margin-top: 15%;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
+.HomeBanner h1 {
+  width: 0%;
+  font-size: 310%;
+  margin-top: auto;
+  padding-bottom: 3%;
+}
+.HomeBanner i {
+  color: white;
+  font-size: 210%;
+  margin-top: auto;
+  padding-bottom: 1%;
+}
+/**  all song sections */
+.tittle {
+  font-size: 600%;
+
+  text-align: center;
+}
+/** Both recent tracks and top 20 */
+
+.track {
+  display: flex;
+  flex-flow: wrap;
+  margin: 1%;
+}
+.albumTrack {
+  width: 50%;
+  height: auto;
+}
+.track img {
+  width: 800px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.topTrack {
+  display: flex;
+  flex-flow: wrap;
+  margin: 1%;
+}
+.topTrack img {
+  width: 800px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.aboutTrack {
+  width: 800px;
+  justify-content: center;
+  flex-flow: wrap;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.heart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 250%;
+  margin: 1%;
+  margin-left: 0%;
+}
+.fa-heart {
+  content: "\f004";
+}
+/*recent tracks */
+.trackData {
+  width: 90%;
+  margin: 1%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 250%;
+}
+/*top+ tracks */
+.trackInfo {
+  margin: 2%;
+  width: 90%;
+  flex-direction: row;
+  font-size: 150%;
+  text-align: start;
+}
+.barGraph {
+  display: flex;
+  margin: 1%;
+  border-color: black;
+  background: rgb(186, 133, 182);
+  background: linear-gradient(
+    90deg,
+    rgba(186, 133, 182, 1) 0%,
+    rgba(115, 16, 130, 1) 17%,
+    rgba(141, 141, 221, 1) 41%,
+    rgba(0, 212, 255, 1) 63%,
+    rgba(116, 224, 181, 1) 87%
+  );
+  border-style: solid;
+  border-radius: 5%;
+  width: 80%;
+}
+.barFill {
+  margin-left: auto;
+  background-color: white;
+}
+.barContainer {
+  font-size: 200%;
+  height: 30%;
+  width: 80%;
+  display: flex;
+  direction: unset;
+  margin-right: 0;
+}
+.infoContainer {
+  margin-left: 8%;
+  display: flex;
+  height: auto;
+  flex-flow: wrap;
+  width: 90%;
+  font-size: 200%;
+  margin-bottom: 5%;
+}
+
+.listenCount {
+  text-align: center;
+}
+
+/*top artists */
+
+.container {
+  position: relative;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ArtistList {
+  justify-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 400%;
+  margin-bottom: 1%;
+
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* comment section*/
+#comments {
+  padding: 10%;
+  padding-top: 0%;
+  justify-content: center;
+}
+
+.commentsForm {
+  font-family: "Hind";
+  display: flex;
+  flex-direction: column;
+  border-radius: 2%;
+  justify-content: center;
+
+  font-size: 150%;
+  padding: 5%;
+  background-color: rgb(241, 237, 237);
+}
+#textBox {
+  font-family: "Hind";
+
+  width: 100%;
+}
+
+#commentSubmit {
+  font-family: "Hind";
+  margin-left: auto;
+  font-size: 100%;
+}
+#replies {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 10%;
+  margin: 1%;
+  background-color: rgb(171, 204, 204);
+  padding: 2%;
+  border-radius: 2%;
+  font-size: 150%;
+}
+
+@media screen and (min-width: 600px) {
+  /* For tablets: */
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* For desktop: */
+
+  /**  all song sections */
+  .tittle {
+    font-size: 300%;
+  }
+  /** Both recent tracks and top 20 */
+
+  .track img {
+    width: 14%;
+    height: 14%;
+    justify-self: left;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .track {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+    justify-content: left;
+  }
+  /*top+ tracks */
+  .trackInfo {
+    margin: 2%;
+    margin-bottom: 0;
+    width: 40%;
+    flex-direction: column;
+    font-size: 100%;
+    text-align: start;
+  }
+  .barGraph {
+    display: flex;
+    margin: 1%;
+    border-color: black;
+    width: 100%;
+  }
+  .barFill {
+    margin-left: auto;
+    background-color: white;
+  }
+  .barContainer {
+    margin-left: 1%;
+    width: 90%;
+    display: flex;
+    direction: unset;
+  }
+
+  .heart i {
+    font-size: 80%;
+  }
+  .listenCount {
+    text-align: center;
+    font-size: 50%;
+  }
+  /*recent tracks */
+  .trackData {
+    width: 100%;
+    margin-top: 0;
+    font-size: 150%;
+  }
+
+  .aboutTrack {
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0%;
+    font-size: 100%;
+  }
+  /*top artists */
+
+  .infoContainer i {
+    font-size: 50%;
+  }
+  .infoContainer .heart {
+    margin: 0;
+    margin-bottom: 4%;
+    margin-left: auto;
+  }
+
+  .container {
+    position: relative;
+    width: 25%;
+  }
+  #ArtistList {
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+
+    flex-flow: wrap;
+    margin: 0%;
+  }
+
+  .image {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  /* comment section*/
+  #comments {
+    padding: 10%;
+    padding-top: 0%;
+    justify-content: center;
+  }
+
+  .commentsForm {
+    font-family: "Hind";
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    justify-content: center;
+
+    font-size: 150%;
+    padding: 5%;
+    background-color: rgb(241, 237, 237);
+  }
+  #textBox {
+    font-family: "Hind";
+
+    width: 100%;
+  }
+
+  #commentSubmit {
+    font-family: "Hind";
+    margin-left: auto;
+    font-size: 100%;
+  }
+  #replies {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 10%;
+    margin: 1%;
+    background-color: rgb(171, 204, 204);
+    padding: 2%;
+    border-radius: 5%;
+    font-size: 150%;
+  }
+
+  #ArtistList {
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .topTrack img {
+    width: 14%;
+    height: 10%;
+    margin: 0%;
+    margin-left: 4%;
+    margin-right: 3%;
+  }
+  .topTrack {
+    font-size: 60%;
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    margin-left: 6%;
+  }
+  .infoContainer {
+    margin: 1%;
+    width: 70%;
+  }
+  .infoContainer .trackInfo {
+    width: 100%;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #contactfooter {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+}

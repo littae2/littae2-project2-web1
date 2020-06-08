@@ -1,0 +1,555 @@
+//@import "elements.less";
+
+@black: black;
+@white: white;
+@font: "Hind";
+@padding: 5%;
+@display: flex;
+@direction: column;
+@flow: wrap;
+@text-align: center;
+@full-size: 100%;
+@filter:grayscale (@HALF);
+@auto: auto;
+@justify: center;
+@gradient:linear-gradient (
+    90deg,
+    rgba(186, 133, 182, 1) 0%,
+    rgba(115, 16, 130, 1) 17%,
+    rgba(141, 141, 221, 1) 41%,
+    rgba(0, 212, 255, 1) 63%,
+    rgba(116, 224, 181, 1) 87%
+  );
+@guitar-img: url("../img/gitar.jpg");
+@border-radius: @border-radius; //5%;
+@transparent-black: rgba(0, 0, 0, 0.5);
+@transition: 0.5s ease;
+@double: 200%;
+@margin: 1%;
+@shrink: 0;
+@box-sizing: border-box;
+@image-px: 800px;
+@none: none;
+@space: space-evenly;
+@keyboard-img: url("../img/keyboard.jpg");
+@heart: "\f004";
+@extra-large: 600%;
+@circle: @HALF;
+@half: 50%;
+@data-size: 250%;
+@larger: 150%;
+.column {
+  width: @full-size;
+}
+footer {
+  background-color: @black;
+  color: @white;
+  text-align: @text-align;
+}
+.footer {
+  flex-shrink: @shrink;
+}
+html {
+  font-family: @font;
+}
+.nav a {
+  margin: @margin;
+  padding-top: @margin;
+  padding-bottom: @margin;
+  font-family: @font;
+  font-size: @double;
+  color: @white;
+
+  text-decoration-line: @none;
+  background-color: @black;
+  border: @none;
+}
+.nav {
+  display: @display;
+  justify-content: @space;
+  text-align: @text-align;
+}
+#Top {
+  background-color: @black;
+}
+header {
+  background-color: @black;
+}
+
+/** Contact page **/
+.contactBanner {
+  background-image: @keyboard-img;
+  background-size: @full-size;
+  background-position-y: @justify;
+  padding: @padding; // 7%;
+  color: @white;
+  filter: @filter;
+}
+#contactfooter {
+  position: absolute;
+  bottom: @shrink;
+  width: @full-size;
+}
+
+.contactForm input {
+  width: 70%;
+  box-sizing: @box-sizing;
+  border: 2px solid #ccc;
+  border-radius: @border-radius; //4px;
+  background-color: #f8f8f8;
+  font-size: @full-size;
+}
+#pageInfo {
+  text-align: @text-align;
+  font-size: @double;
+}
+.contactForm {
+  padding: @padding; // 5%;
+  padding-left: 30%;
+  font-size: @double;
+  justify-content: @justify;
+}
+.contactForm textarea {
+  font-family: @font;
+  width: 70%;
+  height: 35%;
+  font-size: @full-size;
+  padding: @padding; // 12px 20px;
+  box-sizing: @box-sizing;
+  border: 2px solid #ccc;
+  border-radius: @border-radius; //4px;
+  background-color: #f8f8f8;
+  resize: @none;
+}
+
+.contactBanner h1 {
+  text-align: @text-align;
+  font-size: @extra-large;
+  padding-bottom: 3%;
+}
+
+/** Home page header **/
+.HomeBanner {
+  background-image: @guitar-img;
+  filter: @filter;
+  background-size: @full-size;
+  background-position-y: 80%;
+  color: @white;
+  display: @display;
+}
+#profilePic {
+  margin: @margin;
+  margin-top: 15%;
+  width: 20%;
+  height: 20%;
+  border-radius: @circle;
+}
+.HomeBanner h1 {
+  width: 0%;
+  font-size: 310%;
+  margin-top: @auto;
+  padding-bottom: 3%;
+}
+.HomeBanner i {
+  color: @white;
+  font-size: @DOUBLE;
+  margin-top: @auto;
+  padding-bottom: @margin;
+}
+/**  all song sections */
+.tittle {
+  font-size: @extra-large;
+
+  text-align: @text-align;
+}
+/** Both recent tracks and top 20 */
+
+.track {
+  display: @display;
+  flex-flow: @flow;
+  margin: @margin;
+}
+.albumTrack {
+  width: @HALF;
+  height: @auto;
+}
+.track img {
+  width: @image-px;
+  height: @auto;
+  margin-left: @auto;
+  margin-right: @auto;
+  justify-content: @justify;
+}
+.topTrack {
+  display: @display;
+  flex-flow: @flow;
+  margin: @margin;
+}
+.topTrack img {
+  width: @image-px;
+  height: @auto;
+  margin-left: @auto;
+  margin-right: @auto;
+  justify-content: @justify;
+}
+.aboutTrack {
+  width: @image-px;
+  justify-content: @justify;
+  flex-flow: @flow;
+  display: @display;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.heart {
+  display: @display;
+  flex-direction: @direction;
+  justify-content: @justify;
+  font-size: @DATA-SIZE;
+  margin: @margin;
+  margin-left: 0%;
+}
+.fa-heart {
+  content: @heart;
+}
+/*recent tracks */
+.trackData {
+  width: 90%;
+  margin: @margin;
+  margin-right: @auto;
+  margin-left: @auto;
+  font-size: @DATA-SIZE;
+}
+/*top+ tracks */
+.trackInfo {
+  margin: 2%;
+  width: 90%;
+  flex-direction: row;
+  font-size: @LARGER;
+  text-align: start;
+}
+.barGraph {
+  display: @display;
+  margin: @margin;
+  border-color: @black;
+
+  background: @gradient;
+  border-style: solid;
+  border-radius: @border-radius; //5%;
+  width: 80%;
+}
+.barFill {
+  margin-left: @auto;
+  background-color: @white;
+}
+.barContainer {
+  font-size: @double;
+  height: 30%;
+  width: 80%;
+  display: @display;
+  direction: unset;
+  margin-right: @shrink;
+}
+.infoContainer {
+  margin-left: 8%;
+  display: @display;
+  height: @auto;
+  flex-flow: wrap;
+  width: 90%;
+  font-size: @double;
+  margin-bottom: 5%;
+}
+
+.listenCount {
+  text-align: @text-align;
+}
+
+/*top artists */
+
+.container {
+  position: relative;
+  width: 70%;
+  margin-left: @auto;
+  margin-right: @auto;
+}
+#ArtistList {
+  justify-self: @justify;
+  justify-content: @justify;
+  display: @display;
+  flex-direction: @direction;
+  margin: 0%;
+}
+
+.image {
+  width: @full-size;
+  height: @auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: @shrink;
+  background: @black;
+  background: @transparent-black; /* Black see-through */
+  color: #f1f1f1;
+  width: @full-size;
+  transition: @transition;
+  opacity: @shrink;
+  color: @white;
+  font-size: 400%;
+  margin-bottom: @margin;
+
+  text-align: @text-align;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* comment section*/
+#comments {
+  padding: @padding; // 10%;
+  padding-top: 0%;
+  justify-content: @justify;
+}
+
+.commentsForm {
+  font-family: @font;
+  display: @display;
+  flex-direction: @direction;
+  border-radius: @border-radius; //2%;
+  justify-content: @justify;
+
+  font-size: @LARGER;
+  padding: @padding; // 5%;
+  background-color: rgb(241, 237, 237);
+}
+#textBox {
+  font-family: @font;
+
+  width: @full-size;
+}
+
+#commentSubmit {
+  font-family: @font;
+  margin-left: @auto;
+  font-size: @full-size;
+}
+#replies {
+  display: @display;
+  flex-wrap: @flow;
+  height: @auto;
+  margin-top: 10%;
+  margin: @margin;
+  background-color: rgb(171, 204, 204);
+  padding: @padding; // 2%;
+  border-radius: @border-radius; //2%;
+  font-size: @LARGER;
+}
+
+@media screen and (min-width: 600px) {
+  /* For tablets: */
+  .column {
+    width: @HALF;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* For desktop: */
+
+  /**  all song sections */
+  .tittle {
+    font-size: 300%;
+  }
+  /** Both recent tracks and top 20 */
+
+  .track img {
+    width: 14%;
+    height: 14%;
+    justify-self: left;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .track {
+    display: @display;
+    flex-wrap: @flow;
+    margin: @margin;
+    justify-content: left;
+  }
+  /*top+ tracks */
+  .trackInfo {
+    margin: 2%;
+    margin-bottom: @shrink;
+    width: 40%;
+    flex-direction: @direction;
+    font-size: @full-size;
+    text-align: start;
+  }
+  .barGraph {
+    display: @display;
+    margin: @margin;
+    border-color: @black;
+    width: @full-size;
+  }
+  .barFill {
+    margin-left: @auto;
+    background-color: @white;
+  }
+  .barContainer {
+    margin-left: @margin;
+    width: 90%;
+    display: @display;
+    direction: unset;
+  }
+
+  .heart i {
+    font-size: 80%;
+  }
+  .listenCount {
+    text-align: @text-align;
+    font-size: @HALF;
+  }
+  /*recent tracks */
+  .trackData {
+    width: @full-size;
+    margin-top: @shrink;
+    font-size: @LARGER;
+  }
+
+  .aboutTrack {
+    display: @display;
+
+    flex-direction: @direction;
+    flex-wrap: @flow;
+    margin: 0%;
+    font-size: @full-size;
+  }
+  /*top artists */
+
+  .infoContainer i {
+    font-size: @HALF;
+  }
+  .infoContainer .heart {
+    margin: @shrink;
+    margin-bottom: 4%;
+    margin-left: @auto;
+  }
+
+  .container {
+    position: relative;
+    width: 25%;
+  }
+  #ArtistList {
+    justify-self: @justify;
+    justify-content: @justify;
+    display: @display;
+
+    flex-flow: @flow;
+    margin: 0%;
+  }
+
+  .image {
+    display: @display;
+    width: @full-size;
+    height: @auto;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: @shrink;
+
+    color: #f1f1f1;
+    width: @full-size;
+    transition: @transition;
+    opacity: @shrink;
+    color: @white;
+    font-size: 20px;
+
+    text-align: @text-align;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  /* comment section*/
+  #comments {
+    padding: @padding; // 10%;
+    padding-top: 0%;
+    justify-content: @justify;
+  }
+
+  .commentsForm {
+    font-family: @font;
+    display: @display;
+    flex-direction: @direction;
+    border-radius: @border-radius; //5%;
+    justify-content: @justify;
+
+    font-size: @LARGER;
+    padding: @padding; // 5%;
+    background-color: rgb(241, 237, 237);
+  }
+  #textBox {
+    font-family: @font;
+
+    width: @full-size;
+  }
+
+  #commentSubmit {
+    font-family: @font;
+    margin-left: @auto;
+    font-size: @full-size;
+  }
+  #replies {
+    display: @display;
+    flex-wrap: @flow;
+    height: @@auto;
+    margin-top: 10%;
+    margin: @margin;
+    background-color: rgb(171, 204, 204);
+    padding: @padding; // 2%;
+    border-radius: @border-radius; //5%;
+    font-size: @LARGER;
+  }
+
+  #ArtistList {
+    justify-self: @justify;
+    justify-content: @justify;
+    display: @display;
+    flex-flow: @flow;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .topTrack img {
+    width: 14%;
+    height: 10%;
+    margin: 0%;
+    margin-left: 4%;
+    margin-right: 3%;
+  }
+  .topTrack {
+    font-size: 60%;
+    display: @display;
+    flex-direction: row;
+    margin: @margin;
+    margin-left: 6%;
+  }
+  .infoContainer {
+    margin: @margin;
+    width: 70%;
+  }
+  .infoContainer .trackInfo {
+    width: @full-size;
+  }
+  footer {
+    display: @display;
+    flex-wrap: @flow;
+    flex-direction: @direction;
+  }
+  #contactfooter {
+    position: relative;
+    bottom: @shrink;
+    width: @full-size;
+  }
+}
