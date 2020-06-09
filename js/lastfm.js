@@ -1,13 +1,15 @@
+/*
 const express = require('express')
 const fetch = require('node-fetch')
 const app = express()
-const port = 3000 || process.env.PORT
-
+const port = 3000 || process.en v.PORT
+*/
+const urlLink ="d02733622b8b135f188ecebf58c0d1fb/music.json";
 function topArtists() {
   $.ajax({
-    url: "json/musicv3.json",
+    url: urlLink ,
   });
-  $.getJSON("json/musicv3.json", function (data) {
+  $.getJSON(urlLink , function (data) {
     let artists = Object.keys(data);
     let artistListens = [];
     let listens = [];
@@ -31,12 +33,24 @@ function topArtists() {
         }
       }
     }
-
+   let output = document.getElementById("ArtistList");
+    
     for (let i = 0; i < artistOrder.length; i++) {
       let artist = artistOrder[i];
 
       let location = '" ' + data[artist].artistimg + '"';
+      
+      output.innerHTML +=
+      "<div class='container'>" +
+      "<img  src='" +
+      data[artist].artistimg +
+      "' width: 200px height: 200px class='image'>" +
+      " <div class='overlay'>" +
+      artist +
+      "</div> </div>";
+      
 
+    /*
       $("<div class='container'>");
 
       $("<img class ='image'>");
@@ -45,20 +59,19 @@ function topArtists() {
         width: "200px",
         height: "200px",
       });
+    
       $("<div class='overlay'>");
 
       $(".overlay").text(artist);
 
-      $(".image").appendTo($(".container"));
       
-      $(".overlay").appendTo($(".container"));
-      $(".container").appendTo($("#ArtistList"));
-    //  $(".container").appendTo($(".image"));
+      $(".container").addClass($("image"));
 
-     // $(".container").appendTo($(".overlay"));
-    //  $("#ArtistList").appendTo($(".container"));
-      console.log($(".container"))
+      $(".container").addClass($("overlay"));
+      $("#ArtistList").wrap($("container"));
+   */
     }
+    console.log( $("#ArtistList"))
   });
 }
 function heartToggle() {
@@ -85,10 +98,11 @@ function heartToggle() {
   }
 }
 function topTracks() {
+  
   $.ajax({
-    url: "json/musicv3.json",
+    url: urlLink,
   });
-  $.getJSON("json/musicv3.json", function (data) {
+  $.getJSON(urlLink, function (data) {
     let output = document.getElementById("TrackList");
 
     let artists = Object.keys(data);
@@ -181,9 +195,9 @@ function topTracks() {
 
 function recentTracks() {
   $.ajax({
-    url: "json/musicv3.json",
+    url: urlLink ,
   });
-  $.getJSON("json/musicv3.json", function (data) {
+  $.getJSON(urlLink , function (data) {
     let output = document.getElementById("RecentList");
     let artists = Object.keys(data);
     let fullList = [];
@@ -303,6 +317,7 @@ function enterComment() {
     return false;
   });
 }
+
 recentTracks();
 topArtists();
 topTracks();

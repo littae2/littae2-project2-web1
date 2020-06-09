@@ -1,0 +1,503 @@
+@black: black;
+@white: white;
+@font: "Hind";
+@padding: 5%;
+@display: flex;
+@direction: column;
+@flow: wrap;
+@text-align: center;
+@full-size: 100%;
+@half: 50%;
+@filter:grayscale (@half);
+@auto: auto;
+@justify: center;
+@gradient-colour-pink:rgba(186, 133, 182, 1) 0%;
+@gradient-colour-purple:rgba(115, 16, 130, 1) 17%;
+@gradient-colour-lilac:rgba(141, 141, 221, 1) 41%;
+@gradient-colour-blue:rgba(0, 212, 255, 1) 63%;
+@gradient-colour-green: rgba(116, 224, 181, 1) 87%;
+@gradient-angle: 90deg;
+@guitar-img: url("../img/gitar.jpg");
+@border-radius: 5%;
+@transparent-black: rgba(0, 0, 0, 0.5);
+@transition: 0.5s ease;
+@double: 200%;
+@margin:1%;
+@shrink: 0;
+@box-sizing:border-box ;
+@image-px: 800px;
+@none: none;
+@space: space-evenly;
+@keyboard-img: url("../img/keyboard.jpg");
+@heart: "\f004";
+@extra-large: 600%;
+@circle: @half;
+@data-size: 250%;
+@larger: 150%;
+@max-bar-height: 50px;
+
+.column {
+  width: @full-size;
+}
+footer {
+  background-color: @black;
+  color: @white;
+  text-align: @text-align;
+}
+.footer {
+  flex-shrink:@shrink;
+}
+html {
+  font-family: @font;
+}
+.nav {
+  a {
+    margin: @margin;
+    padding-top: @margin;
+    padding-bottom: @margin;
+    font-family: @font;
+    font-size: @double;
+    color: @white;
+    text-decoration-line:@none;
+    background-color: @black;
+    border:@none;
+  }
+  display: @display;
+  justify-content: @space;
+  text-align: @text-align;
+}
+#Top {
+  background-color: @black;
+}
+header {
+  background-color: @black;
+}
+.contactBanner {
+  background-image: @keyboard-img;
+  background-size: @full-size;
+  background-position-y: @justify;
+  padding: @padding; //7%;
+  color: @white;
+  filter: @filter;
+  h1 {
+    text-align: @text-align;
+    font-size: @extra-large;
+    padding-bottom: 3%;
+  }
+}
+#contactfooter {
+  position: absolute;
+  bottom:@shrink;
+  width: @full-size;
+}
+.contactForm {
+  input {
+    width: 70%;
+    box-sizing: @box-sizing ;
+    border: 2px solid #ccc;
+    border-radius: @border-radius; //4px;
+    background-color: #f8f8f8;
+    font-size: @full-size;
+  }
+  padding: @padding; //5%;
+  padding-left: 30%;
+  font-size: @double;
+  justify-content: @justify;
+  textarea {
+    font-family: @font;
+    width: 70%;
+    height: 35%;
+    font-size: @full-size;
+    padding: @padding; //12px 20px;
+    box-sizing: @box-sizing ;
+    border: 2px solid #ccc;
+    border-radius: @border-radius; //4px;
+    background-color: #f8f8f8;
+    resize:@none;
+  }
+}
+#pageInfo {
+  text-align: @text-align;
+  font-size: @double;
+}
+.HomeBanner {
+  background-image: @guitar-img;
+  filter: @filter;
+  background-size: @full-size;
+  background-position-y: 80%;
+  color: @white;
+  display: @display;
+  h1 {
+    width:@shrink;
+    font-size: 310%;
+    margin-top: @auto;
+    padding-bottom: 3%;
+  }
+  i {
+    color: @white;
+    font-size: 210%;
+    margin-top: @auto;
+    padding-bottom: @margin;
+  }
+}
+#profilePic {
+  margin: @margin;
+  margin-top: 15%;
+  width: 20%;
+  height: 20%;
+  border-radius: @circle;
+}
+.tittle {
+  font-size: @extra-large;
+  text-align: @text-align;
+}
+.track {
+  display: @display;
+  flex-flow: @flow;
+  margin: @margin;
+  img {
+    width: @image-px;
+    height: @auto;
+    margin-left: @auto;
+    margin-right: @auto;
+    justify-content: @justify;
+  }
+}
+.albumTrack {
+  width: @half;
+  height: @auto;
+}
+.topTrack {
+  display: @display;
+  flex-flow: @flow;
+  margin: @margin;
+  img {
+    width: @image-px;
+    height: @auto;
+    margin-left: @auto;
+    margin-right: @auto;
+    justify-content: @justify;
+  }
+}
+.aboutTrack {
+  width: @image-px;
+  justify-content: @justify;
+  flex-flow: @flow;
+  display: @display;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.heart {
+  display: @display;
+  flex-direction: @direction;
+  justify-content: @justify;
+  font-size: @data-size;
+  margin: @margin;
+  margin-left:@shrink;
+}
+.fa-heart {
+  content: @heart;
+}
+.trackData {
+  width: 90%;
+  margin: @margin;
+  margin-right: @auto;
+  margin-left: @auto;
+  font-size: @data-size;
+}
+.trackInfo {
+  margin: @margin; //2%;
+  width: 90%;
+  flex-direction: row;
+  font-size: @larger;
+  text-align: @text-align; // start;
+}
+.barGraph {
+  display: @display;
+  margin: @margin;
+  border-color: @black;
+
+  background: linear-gradient(@gradient-angle,
+	  @gradient-colour-pink, 
+	  @gradient-colour-purple,
+	  @gradient-colour-lilac,
+	  @gradient-colour-blue,
+	  @gradient-colour-green);
+
+  border-style: solid;
+  border-radius: @border-radius; //5%;
+  width: 80%;
+  height:90%;
+  max-height: @max-bar-height;
+}
+.barFill {
+  margin-left: @auto;
+  background-color: @white;
+}
+.barContainer {
+  font-size: @double;
+  height: 30%;
+  width: 80%;
+  display: @display;
+  direction: unset;
+  margin-right:@shrink;
+}
+.infoContainer {
+  margin-left: 8%;
+  display: @display;
+  height: @auto;
+  flex-flow: @flow;
+  width: 90%;
+  font-size: @double;
+  margin-bottom: 5%;
+}
+.listenCount {
+  text-align: @text-align;
+}
+.container {
+  position: relative;
+  width: 70%;
+  margin-left: @auto;
+  margin-right: @auto;
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
+}
+#ArtistList {
+  justify-self: @justify;
+  justify-content: @justify;
+  display: @display;
+  flex-direction: @direction;
+  margin: @margin; //0%;
+}
+.image {
+  width: @full-size;
+  height: @auto;
+}
+.overlay {
+  position: absolute;
+  bottom:@shrink;
+  background: @black;
+  background: @transparent-black;
+  color: #f1f1f1;
+  width: @full-size;
+  transition: @transition;
+  opacity:@shrink;
+  color: @white;
+  font-size: 400%;
+  margin-bottom: @margin;
+  text-align: @text-align;
+}
+#comments {
+  padding: @padding; //10%;
+  padding-top:@shrink;
+  justify-content: @justify;
+}
+.commentsForm {
+  font-family: @font;
+  display: @display;
+  flex-direction: @direction;
+  border-radius: @border-radius; //2%;
+  justify-content: @justify;
+  font-size: @larger;
+  padding: @padding; //5%;
+  background-color: rgb(241, 237, 237);
+}
+#textBox {
+  font-family: @font;
+  width: @full-size;
+}
+#commentSubmit {
+  font-family: @font;
+  margin-left: @auto;
+  font-size: @full-size;
+}
+#replies {
+  display: @display;
+  flex-wrap: @flow;
+  height: @auto;
+  margin-top: 10%;
+  margin: @margin;
+  background-color: rgb(171, 204, 204);
+  padding: @padding; //2%;
+  border-radius: @border-radius; //2%;
+  font-size: @larger;
+}
+
+@media screen and (min-width: 1024px) {
+  .tittle {
+    font-size: 300%;
+  }
+  .track {
+    img {
+      width: 14%;
+      height: 14%;
+      justify-self: left;
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+    display: @display;
+    flex-wrap: @flow;
+    margin: @margin;
+    justify-content: left;
+  }
+  .trackInfo {
+    margin: @margin; //2%;
+    margin-bottom:@shrink;
+    width: 40%;
+    flex-direction: @direction;
+    font-size: @full-size;
+    text-align: @text-align; // start;
+  }
+  .barGraph {
+    display: @display;
+    margin: @margin;
+    border-color: @black;
+    width: @full-size;
+  }
+  .barFill {
+    margin-left: @auto;
+    background-color: @white;
+  }
+  .barContainer {
+    margin-left: @margin;
+    width: 90%;
+    display: @display;
+    direction: unset;
+  }
+  .heart {
+    i {
+      font-size: 80%;
+    }
+  }
+  .listenCount {
+    text-align: @text-align;
+    font-size: @half;
+  }
+  .trackData {
+    width: @full-size;
+    margin-top:@shrink;
+    font-size: @larger;
+  }
+  .aboutTrack {
+    display: @display;
+    flex-direction: @direction;
+    flex-wrap: @flow;
+    margin: @margin; //0%;
+    font-size: @full-size;
+  }
+  .infoContainer {
+    i {
+      font-size: @half;
+    }
+    .heart {
+      margin: @margin; //0;
+      margin-bottom: 4%;
+      margin-left: @auto;
+    }
+    margin: @margin;
+    width: 70%;
+    .trackInfo {
+      width: @full-size;
+    }
+  }
+  .container {
+    position: relative;
+    width: 25%;
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+  #ArtistList {
+    justify-self: @justify;
+    justify-content: @justify;
+    display: @display;
+    flex-flow: @flow;
+    margin: @margin; //0%;
+    justify-self: @justify;
+    justify-content: @justify;
+    display: @display;
+    flex-flow: @flow;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .image {
+    display: @display;
+    width: @full-size;
+    height: @auto;
+  }
+  .overlay {
+    position: absolute;
+    bottom:@shrink;
+    color: #f1f1f1;
+    width: @full-size;
+    transition: @transition;
+    opacity:@shrink;
+    color: @white;
+    font-size: 20px;
+    text-align: @text-align;
+  }
+  #comments {
+    padding: @padding; //10%;
+    padding-top:@shrink;
+    justify-content: @justify;
+  }
+  .commentsForm {
+    font-family: @font;
+    display: @display;
+    flex-direction: @direction;
+    border-radius: @border-radius; //5%;
+    justify-content: @justify;
+    font-size: @larger;
+    padding: @padding; //5%;
+    background-color: rgb(241, 237, 237);
+  }
+  #textBox {
+    font-family: @font;
+    width: @full-size;
+  }
+  #commentSubmit {
+    font-family: @font;
+    margin-left: @auto;
+    font-size: @full-size;
+  }
+  #replies {
+    display: @display;
+    flex-wrap: @flow;
+    height: @auto;
+    margin-top: 10%;
+    margin: @margin;
+    background-color: rgb(171, 204, 204);
+    padding: @padding; //2%;
+    border-radius: @border-radius; //5%;
+    font-size: @larger;
+  }
+  .topTrack {
+    img {
+      width: 14%;
+      height: 10%;
+      margin: @margin; //0%;
+      margin-left: 4%;
+      margin-right: 3%;
+    }
+    font-size: 60%;
+    display: @display;
+    flex-direction: row;
+    margin: @margin;
+    margin-left: 6%;
+  }
+  footer {
+    display: @display;
+    flex-wrap: @flow;
+    flex-direction: @direction;
+  }
+  #contactfooter {
+    position: relative;
+    bottom:@shrink;
+    width: @full-size;
+  }
+}
